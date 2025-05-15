@@ -75,45 +75,45 @@ img {
 }
 
 #bt1 {
-  background-image: url("/assets/amb1.png");
+  background-image: url("../assets/amb1.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 
 #bt2 {
-  background-image: url("/assets/amb2.png");
+  background-image: url("../assets/amb2.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 #bt3 {
-  background-image: url("/assets/amb3.png");
+  background-image: url("../assets/amb3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 #bt4 {
-  background-image: url("/assets/amb4.png");
+  background-image: url("../assets/amb4.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 #bt5 {
-  background-image: url("/assets/amb5.png");
+  background-image: url("../assets/amb5.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 #bt6 {
-  background-image: url("/assets/amb6.png");
+  background-image: url("../assets/amb6.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
 }
 
 #bt7 {
-  background-image: url("/assets/amb7.png");
+  background-image: url("../assets/amb7.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top 5% left 5%;
