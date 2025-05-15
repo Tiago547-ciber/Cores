@@ -44,7 +44,7 @@ function App() {
   useEffect(() => {
     setInterval(() => {
       const img = document.getElementById('img');
-      img.style.backgroundImage = 'url("src/assets/'+ fotos[i] + '")';
+      img.style.backgroundImage = 'url("/assets/'+ fotos[i] + '")';
     }, 100)
 
   }, [])
