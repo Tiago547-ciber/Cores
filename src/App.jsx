@@ -64,7 +64,7 @@ function App() {
       <title>Seletor de Cores.</title>
       <div className='BoasV'>
         <h1>Bem Vindo ao Seletor de Cores</h1>
-        <img src='../assets/cores.jpg'/>       
+        <img src='/assets/cores.jpg'/>       
       </div>
       <div className="fundo" id='fundo'>
        
