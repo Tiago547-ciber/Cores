@@ -1,0 +1,189 @@
+
+
+.BoasV {
+  text-align: center;
+  display: inline;
+  width: 1135px;
+  color:black;
+  position: absolute;
+  z-index: 1;
+  margin: -660px 0 0 -150px;
+  box-shadow: 2px 1px 8px 1px black;
+  background-color: #ffffff;
+  font-family: sans-serif;
+}
+
+img {
+  width: 150px;
+  height: 100px;
+  position: absolute;
+  z-index: 15;
+  margin: -110px 0 0 230px;
+}
+
+.main {
+  display: flex;
+  margin: -20px 100px 100px 150px;
+  
+}
+
+.imagem {
+  width: 800px;
+  height: 800px;
+  border: solid 2px black;
+  border-radius: 20px;
+  z-index: 3;
+  position: absolute;
+  margin: -500px 100px 100px 50px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.fundo {
+  width: 800px;
+  height: 800px;
+  border: solid 2px black;
+  border-radius: 20px;
+  z-index: 2;
+  position: absolute;
+  margin: -500px 100px 100px 50px;
+}
+
+#input {
+  width: 440px;
+  height: 50px;
+  margin: 350px 100px 100px 120px;
+  z-index: 4;
+  position: absolute;
+  border-radius: 10px;
+  background-color: white;
+  color: black;
+  font-size: 15px;
+  font-weight: bold;
+}
+.botoes {
+  display: flexbox;
+  margin: 400px 50px 50px -70px;
+  z-index: 7;
+  position: absolute;
+}
+
+.formB {
+  width: 100px;
+  height: 150px;
+  margin: 20px 20px 20px 20px;
+}
+
+#bt1 {
+  background-image: url("/assets/amb1.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+
+#bt2 {
+  background-image: url("/assets/amb2.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+#bt3 {
+  background-image: url("/assets/amb3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+#bt4 {
+  background-image: url("/assets/amb4.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+#bt5 {
+  background-image: url("/assets/amb5.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+#bt6 {
+  background-image: url("/assets/amb6.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+
+#bt7 {
+  background-image: url("/assets/amb7.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top 5% left 5%;
+}
+
+#label {
+  font-weight: bold;
+  font-size:x-large;
+}
+
+
+@media (max-width:360px) {
+  body {
+    display: inline-block;
+
+    position:absolute;
+  }
+  #input {
+    width: 340px;
+    height: 50px;
+    margin: 650px 100px 100px -220px;
+
+  }
+  .imagem {
+
+    margin: 200px 100px 100px -105px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .fundo {
+    margin: 200px 100px 100px -105px;
+    width: 400px;
+    height: 400px;
+  }
+
+  .botoes {
+    margin: 700px 50px 50px -50px;
+
+    
+  }
+
+  .formB {
+    width: 100px;
+    height: 150px;
+    box-shadow: 2px 2px 2px 2px gray;
+  }
+
+  .BoasV {
+    text-align: center;
+    display: inline;
+    width: 300px;
+    color:black;
+    position: absolute;
+    z-index: 45;
+    margin: 50px 0 0 -50px;
+    box-shadow: 2px 1px 8px 1px black;
+    background-color: #ffffff;
+    font-family: sans-serif;
+  }
+
+  img {
+    width: 100px;
+    height: 40px;
+    position: absolute;
+    z-index: 15;
+    margin: -45px 0 0 -60px;
+  }
+  h1 {
+    font-weight: bold;
+    font-size:x-large;
+  }
+}
