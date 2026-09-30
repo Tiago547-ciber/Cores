@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Seletor de Cores</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f9;
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
+      min-height: 100vh;
+    }
+
+    /* Cabeçalho */
+    .header {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 15px;
+      background-color: #ffffff;
+      padding: 15px 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 25px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    .header h1 {
+      font-size: 24px;
+    }
+
+    .header img {
+      width: 60px;
+      height: 40px;
+      object-fit: cover;
+      border-radius: 6px;
+    }
+
+    /* Layout Principal */
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      width: 100%;
+      max-width: 800px;
+    }
+
+    /* Pré-visualização do Ambiente */
+    .preview-box {
+      position: relative;
+      width: 100%;
+      max-width: 600px;
+      height: 400px;
+      border: 2px solid #333;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+      background-color: #fff;
+    }
+
+    .fundo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+      transition: background-color 0.3s ease;
+    }
+
+    .imagem {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.3s ease;
+    }
+
+    /* Seletores e Controles */
+    .controls {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 100%;
+      max-width: 600px;
+    }
+
+    select {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      font-weight: bold;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    /* Galeria de Botões de Ambientes */
+    .botoes {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
+      gap: 10px;
+      width: 100%;
+    }
+
+    .formB {
+      height: 70px;
+      border: 2px solid transparent;
+      border-radius: 8px;
+      background-size: cover;
+      background-position: center;
+      cursor: pointer;
+      transition: transform 0.2s, border-color 0.2s;
+    }
+
+    .formB:hover {
+      transform: scale(1.05);
+      border-color: #007bff;
+    }
+
+    /* Mapeamento dos Botões com as Imagens da Pasta Assets */
+    #bt1 { background-image: url("assets/amb1.png"); }
+    #bt2 { background-image: url("assets/amb2.png"); }
+    #bt3 { background-image: url("assets/amb3.png"); }
+    #bt4 { background-image: url("assets/amb4.png"); }
+    #bt5 { background-image: url("assets/amb5.png"); }
+    #bt6 { background-image: url("assets/amb6.png"); }
+    #bt7 { background-image: url("assets/amb7.png"); }
+
+    @media (max-width: 480px) {
+      .preview-box {
+        height: 280px;
+      }
+      .header h1 {
+        font-size: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Bem-vindo ao Seletor de Cores</h1>
+    <img src="assets/cores.jpg" alt="Cores">
+  </div>
+
+  <div class="container">
+    
+    <!-- Área de Visualização -->
+    <div class="preview-box">
+      <div class="fundo" id="fundo"></div>
+      <div class="imagem" id="img"></div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls">
+      
+      <!-- Seletor de Cores (Formatado com optgroup) -->
+      <select id="input">
+        <option value="" disabled selected>Selecione uma cor...</option>
+        
+        <optgroup label="Amarelos">
+          <option value="#FDF6C7">Papel de Seda</option>
+          <option value="#FCEE9E">Brilho do Luar</option>
+          <option value="#FBF3D5">Suspiro Caseiro</option>
+          <option value="#F7E7A1">Manteiga de Carité</option>
+          <option value="#FFD700">Luz do Sol</option>
+          <option value="#F8DE7E">Jasmim-amarelo</option>
+        </optgroup>
+
+        <optgroup label="Laranjas">
+          <option value="#FFA500">Tangerina Fresca</option>
+          <option value="#FF7F50">Sorbet de Pêssego</option>
+          <option value="#E67E22">Tijolo Queimado</option>
+          <option value="#D35400">Cabalá</option>
+        </optgroup>
+
+        <optgroup label="Vermelhos e Rosas">
+          <option value="#FFC0CB">Petúnia Rosa</option>
+          <option value="#FF69B4">Lírio-rosa</option>
+          <option value="#FF1493">Rosa-amor</option>
+          <option value="#DB7093">Conto de Fadas</option>
+        </optgroup>
+      </select>
+
+      <!-- Galeria de Amostras de Ambientes -->
+      <div class="botoes">
+        <button type="button" class="formB" id="bt1" onclick="changeAmbient(0)"></button>
+        <button type="button" class="formB" id="bt2" onclick="changeAmbient(1)"></button>
+        <button type="button" class="formB" id="bt3" onclick="changeAmbient(2)"></button>
+        <button type="button" class="formB" id="bt4" onclick="changeAmbient(3)"></button>
+        <button type="button" class="formB" id="bt5" onclick="changeAmbient(4)"></button>
+        <button type="button" class="formB" id="bt6" onclick="changeAmbient(5)"></button>
+        <button type="button" class="formB" id="bt7" onclick="changeAmbient(6)"></button>
+      </div>
+
+    </div>
+
+  </div>
+
+  <script>
+    // Lista de Imagens de Ambientes (Baseado nos ficheiros da pasta assets/)
+    const ambientes = [
+      'assets/amb1.png',
+      'assets/amb2.png',
+      'assets/amb3.png',
+      'assets/amb4.png',
+      'assets/amb5.png',
+      'assets/amb6.png',
+      'assets/amb7.png'
+    ];
+
+    const elImg = document.getElementById('img');
+    const elFundo = document.getElementById('fundo');
+    const selectCor = document.getElementById('input');
+
+    // Função para alterar o ambiente visualizado
+    function changeAmbient(index) {
+      if (ambientes[index]) {
+        elImg.style.backgroundImage = `url("${ambientes[index]}")`;
+      }
+    }
+
+    // Evento para trocar a cor de fundo (simulando a tinta)
+    selectCor.addEventListener('change', (e) => {
+      const corSelecionada = e.target.value;
+      elFundo.style.backgroundColor = corSelecionada;
+    });
+
+    // Inicializa com o primeiro ambiente
+    changeAmbient(0);
+  </script>
+
+</body>
+</html>
+
